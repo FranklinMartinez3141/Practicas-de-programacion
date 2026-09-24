@@ -15,7 +15,7 @@ entrada.question("Elige una opcion: ", function(opcion){
     
     switch(opcion){
         case 1: 
-            console.log("Saldo actual: $" + saldo);
+            console.log("Saldo actual: $" + saldo.toFixed(2));
             entrada.close();
             break;
             
@@ -32,7 +32,7 @@ entrada.question("Elige una opcion: ", function(opcion){
                     console.log("Error: No tiene saldo suficiente.");
                 } else {
                     saldo -= monto;
-                    console.log("Retiro exitoso. Saldo actual: $" + saldo);
+                    console.log("Retiro exitoso. Saldo actual: $" + saldo.toFixed(2));
                 }
                 entrada.close();
             });
@@ -47,7 +47,7 @@ entrada.question("Elige una opcion: ", function(opcion){
                     console.log("ERROR: Cantidad inválida (debe ser mayor a 0 y máximo $5000).");
                 } else {
                     saldo += depo;
-                    console.log("Depósito exitoso. Saldo actual: $" + saldo);
+                    console.log("Depósito exitoso. Saldo actual: $" + saldo.toFixed(2));
                 }
                 entrada.close();
             });
